@@ -1,4 +1,4 @@
-namespace MasteringDesignPatterns;
+namespace MasteringDesignPatterns.chapter01.Polymorphism;
 
 public class BasicPipeline
 {
@@ -6,17 +6,21 @@ public class BasicPipeline
     {
         WriteLog($"Starting processing of event {basicEvent.Id}");
         Validate(basicEvent);
+        WriteLog($"Processing {basicEvent.Id}");
+        ProcessEvent(basicEvent);
+        WriteLog($"Processing successfully completed for event {basicEvent.Id}");
     }
 
     private void ProcessEvent(BasicEvent basicEvent)
     {
-        // Do processing stuff
+        // Do processing stuff...
     }
+    
     protected void WriteLog(string message)
     {
         Console.WriteLine(message);
     }
-
+    
     protected virtual void Validate(BasicEvent basicEvent)
     {
         if (basicEvent == null)

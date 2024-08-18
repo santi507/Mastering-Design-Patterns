@@ -1,4 +1,4 @@
-namespace MasteringDesignPatterns.chapter01;
+namespace MasteringDesignPatterns.chapter01.Polymorphism;
 
 public class ExtendedPipeline : BasicPipeline
 {
